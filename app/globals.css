@@ -77,7 +77,10 @@
 
 @layer utilities {
   body {
-    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    color: var(--dark-slate-grey);
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    line-height: 155%;
   }
 }
 
@@ -272,4 +275,17 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
 }

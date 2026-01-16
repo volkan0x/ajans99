@@ -40,19 +40,44 @@ function Button({
   variant,
   size,
   asChild = false,
+  iconLeading,
+  iconTrailing,
+  children,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
+    iconLeading?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    iconTrailing?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   }) {
   const Comp = asChild ? SlotPrimitive.Slot : "button";
+  
+  // When using asChild with icons, we can't pass multiple children to Slot
+  // So we ignore icons when asChild is true
+  const hasIcons = iconLeading || iconTrailing;
+  
+  if (asChild) {
+    return (
+      <Comp
+        data-slot="button"
+        className={cn(buttonVariants({ variant, size, className }))}
+        {...props}
+      >
+        {children}
+      </Comp>
+    );
+  }
 
   return (
     <Comp
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
-    />
+    >
+      {iconLeading && React.createElement(iconLeading)}
+      {children}
+      {iconTrailing && React.createElement(iconTrailing)}
+    </Comp>
   );
 }
 

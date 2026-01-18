@@ -8,7 +8,15 @@
     "db:seed": "npx tsx lib/db/seed.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "deploy": "vercel",
+    "deploy:prod": "vercel --prod",
+    "deploy:check": "./scripts/pre-deploy.sh",
+    "deploy:preview": "vercel",
+    "deploy:production": "./scripts/pre-deploy.sh && vercel --prod",
+    "vercel:pull": "vercel pull --yes",
+    "vercel:build": "vercel build",
+    "vercel:build:prod": "vercel build --prod"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.36.0",

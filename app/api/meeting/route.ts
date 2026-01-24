@@ -42,6 +42,13 @@ export async function POST(request: Request) {
     }
 
     // E-posta gönder
+    if (!resend) {
+      return NextResponse.json(
+        { success: false, error: 'Email service not configured' },
+        { status: 500 }
+      );
+    }
+
     const { data, error } = await resend.emails.send({
       from: 'Ajans 99 <onboarding@resend.dev>',
       to: ['nifyloses@gmail.com'], // ZORUNLU: Resend test modunda sadece kayıtlı e-postanıza gönderilebilir

@@ -4,7 +4,16 @@ import { activityLogs, teamMembers, teams, users } from './schema';
 import { cookies } from 'next/headers';
 import { verifyToken } from '@/lib/auth/session';
 
+// Helper function to ensure db is available
+function ensureDb() {
+  if (!db) {
+    throw new Error('Database not available');
+  }
+  return db;
+}
+
 export async function getUser() {
+  ensureDb();
   const sessionCookie = (await cookies()).get('session');
   if (!sessionCookie || !sessionCookie.value) {
     return null;
@@ -23,7 +32,7 @@ export async function getUser() {
     return null;
   }
 
-  const user = await db
+  const user = await ensureDb()
     .select()
     .from(users)
     .where(and(eq(users.id, sessionData.user.id), isNull(users.deletedAt)))
@@ -37,7 +46,7 @@ export async function getUser() {
 }
 
 export async function getUserWithTeam(userId: number) {
-  const result = await db
+  const result = await ensureDb()
     .select({
       user: users,
       teamId: teamMembers.teamId
@@ -56,7 +65,7 @@ export async function getActivityLogs() {
     throw new Error('User not authenticated');
   }
 
-  return await db
+  return await ensureDb()
     .select({
       id: activityLogs.id,
       action: activityLogs.action,
@@ -77,7 +86,7 @@ export async function getTeamForUser() {
     return null;
   }
 
-  const result = await db.query.teamMembers.findFirst({
+  const result = await ensureDb().query.teamMembers.findFirst({
     where: eq(teamMembers.userId, user.id),
     with: {
       team: {

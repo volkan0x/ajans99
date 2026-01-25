@@ -2,12 +2,20 @@ import { db } from './drizzle';
 import { users, teams, teamMembers } from './schema';
 import { hashPassword } from '@/lib/auth/session';
 
+// Helper function to ensure db is available
+function ensureDb() {
+  if (!db) {
+    throw new Error('Database not available');
+  }
+  return db;
+}
+
 async function seed() {
   const email = 'test@test.com';
   const password = 'admin123';
   const passwordHash = await hashPassword(password);
 
-  const [user] = await db
+  const [user] = await ensureDb()
     .insert(users)
     .values([
       {
@@ -20,14 +28,14 @@ async function seed() {
 
   console.log('Initial user created.');
 
-  const [team] = await db
+  const [team] = await ensureDb()
     .insert(teams)
     .values({
       name: 'Test Team',
     })
     .returning();
 
-  await db.insert(teamMembers).values({
+  await ensureDb().insert(teamMembers).values({
     teamId: team.id,
     userId: user.id,
     role: 'owner',

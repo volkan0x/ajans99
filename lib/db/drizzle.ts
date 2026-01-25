@@ -5,9 +5,12 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-if (!process.env.POSTGRES_URL) {
+// Skip database connection during build time
+const isBuildTime = process.env.NODE_ENV === 'production' && !process.env.POSTGRES_URL;
+
+if (!isBuildTime && !process.env.POSTGRES_URL) {
   throw new Error('POSTGRES_URL environment variable is not set');
 }
 
-export const client = postgres(process.env.POSTGRES_URL);
-export const db = drizzle(client, { schema });
+export const client = isBuildTime ? null : postgres(process.env.POSTGRES_URL!);
+export const db = isBuildTime ? null : drizzle(client!, { schema });

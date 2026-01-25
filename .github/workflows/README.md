@@ -73,7 +73,6 @@ Add these secrets:
 | `VERCEL_ORG_ID` | `team_xxxxxxxxxxxxx` | From `.vercel/project.json` |
 | `VERCEL_PROJECT_ID` | `prj_xxxxxxxxxxxxx` | From `.vercel/project.json` |
 | `POSTGRES_URL` | `postgresql://...` | Production database URL |
-| `STRIPE_SECRET_KEY` | `sk_live_...` | Production Stripe key |
 | `AUTH_SECRET` | Generate with `openssl rand -base64 32` | Auth secret |
 | `BASE_URL` | `https://yourapp.vercel.app` | Production URL |
 

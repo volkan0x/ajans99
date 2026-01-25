@@ -110,7 +110,6 @@ type/short-description
 ```
 
 **Examples:**
-- `feature/stripe-integration`
 - `fix/dashboard-loading`
 - `chore/update-dependencies`
 - `docs/api-documentation`

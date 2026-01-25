@@ -9,7 +9,7 @@ import {
 
 export const stripe = process.env.STRIPE_SECRET_KEY && !process.env.STRIPE_SECRET_KEY.includes('***')
   ? new Stripe(process.env.STRIPE_SECRET_KEY, {
-      apiVersion: '2025-08-27.basil'
+      apiVersion: '2025-11-15.basil'
     })
   : null;
 

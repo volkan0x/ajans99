@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CreditCard, Database, Zap, Shield, Code2, Gauge, Sparkles, Users, Heart, MessageCircle, Send, Bookmark, Facebook, Instagram, Linkedin, Youtube, Video, Palette, Camera, Star, Rocket, Briefcase, Trophy, Lightbulb } from 'lucide-react';
+import { ArrowRight, CreditCard, Database, Zap, Shield, Code2, Gauge, Sparkles, Users, Heart, MessageCircle, Send, Bookmark, Facebook, Instagram, Linkedin, Youtube, Video, Palette, Camera, Star, Rocket, Briefcase, Trophy, Lightbulb, Clapperboard } from 'lucide-react';
 import { Terminal } from './terminal';
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
 import { Cover } from "@/components/ui/cover";
@@ -189,8 +189,9 @@ export default function HomePage() {
         <BentoGridItem
                   title="Profesyonel Sosyal Medya Yönetimi"
                   description="Markanızın sosyal medya varlığını güçlendiren, stratejik içerik planlama ve topluluk yönetimi hizmetleri."
-                  profileImage="/instagram4.jpg"
                   profileName="Social Media Pro"
+                  profileIcon={<Camera className="w-5 h-5" />}
+                  whiteProfileIcon={true}
                   header={
                     <div className="flex h-full w-full items-center justify-center rounded-lg overflow-hidden">
                       <div className="relative w-[550px] h-[480px] overflow-hidden rounded-lg bg-black">
@@ -226,8 +227,9 @@ export default function HomePage() {
                 <BentoGridItem
                   title="Viral Video İçerikleri"
                   description="Ürün ve hizmetlerinizi görsel olarak anlatan, profesyonel video animasyonlar."
-                  profileImage="/instagram5.jpg"
                   profileName="Content Creator"
+                  profileIcon={<Clapperboard className="w-5 h-5" />}
+                  whiteProfileIcon={true}
                   header={
 
                     <div className="flex h-full w-full items-center justify-center rounded-lg overflow-hidden">
@@ -265,8 +267,9 @@ export default function HomePage() {
                 <BentoGridItem
                   title="Viral Video İçerikleri"
                   description="Ürün ve hizmetlerinizi görsel olarak anlatan, profesyonel video animasyonlar."
-                  profileImage="/instagram6.jpg"
                   profileName="Viral Studio"
+                  profileIcon={<Sparkles className="w-5 h-5" />}
+                  whiteProfileIcon={true}
                   header={
 
                     <div className="flex h-full w-full items-center justify-center rounded-lg overflow-hidden">
@@ -304,8 +307,9 @@ export default function HomePage() {
                 <BentoGridItem
                   title="Viral Video İçerikleri"
                   description="Ürün ve hizmetlerinizi görsel olarak anlatan, profesyonel video animasyonlar."
-                  profileImage="/instagram7.jpg"
                   profileName="Graphic Designer"
+                  profileIcon={<Rocket className="w-5 h-5" />}
+                  whiteProfileIcon={true}
                   header={
 
                     <div className="flex h-full w-full items-center justify-center rounded-lg overflow-hidden">
@@ -343,8 +347,9 @@ export default function HomePage() {
                 <BentoGridItem
                   title="Özel Grafik Tasarımlar"
                   description="Markanıza özel, dikkat çekici ve profesyonel grafik tasarım çözümleri."
-                  profileImage="/instagram8.jpg"
                   profileName="Animation Pro"
+                  profileIcon={<Star className="w-5 h-5" />}
+                  whiteProfileIcon={true}
                   header={
                     <div className="flex h-full w-full max-w-[1000px] items-center justify-center rounded-lg overflow-hidden">
                       <div className="relative aspect-square w-full  overflow-hidden rounded-lg">
@@ -374,8 +379,9 @@ export default function HomePage() {
                 <BentoGridItem
                   title="Profesyonel Logo Animasyonları"
                   description="İşletmeniz için profesyonel video çekimleri ve kurguları."
-                  profileImage="/instagram9.jpg"
                   profileName="3D Studio"
+                  profileIcon={<Briefcase className="w-5 h-5" />}
+                  whiteProfileIcon={true}
                   header={
                     <div className="flex h-full w-full items-center justify-center rounded-lg overflow-hidden">
                       <div className="relative h-full w-full overflow-hidden rounded-lg bg-black">
@@ -409,8 +415,9 @@ export default function HomePage() {
                 <BentoGridItem
                   title="Profesyonel 3D Animasyon ve VR Efektleri"
                   description="İşletmeniz için profesyonel video çekimleri ve kurguları."
-                  profileImage="/instagram1.jpg"
                   profileName="Brand Hotel"
+                  profileIcon={<Lightbulb className="w-5 h-5" />}
+                  whiteProfileIcon={true}
                   header={
                     <div className="flex h-full w-full items-center justify-center rounded-lg overflow-hidden">
                       <div className="relative h-full w-full overflow-hidden rounded-lg bg-black">
@@ -444,8 +451,9 @@ export default function HomePage() {
                 <BentoGridItem
                   title="Instagram Profil Yönetimi"
                   description="Profesyonel Instagram profil yönetimi ve içerik stratejisi ile takipçi kitlenizi büyütün."
-                  profileImage="/instagram4.jpg"
                   profileName="Social Media"
+                  profileIcon={<Trophy className="w-5 h-5" />}
+                  whiteProfileIcon={true}
                   header={
                     <div className="flex h-full w-full items-center justify-center rounded-lg overflow-hidden bg-gradient-to-br from-purple-50 to-pink-50 p-4">
                       <div className="w-full max-w-[320px] bg-white rounded-lg shadow-sm">
@@ -502,8 +510,9 @@ export default function HomePage() {
                 <BentoGridItem
                   title="Özel Grafik Tasarımlar"
                   description="Markanıza özel, dikkat çekici ve profesyonel grafik tasarım çözümleri."
-                  profileImage="/instagram2.jpg"
                   profileName="Design Expert"
+                  profileIcon={<Palette className="w-5 h-5" />}
+                  whiteProfileIcon={true}
                   header={
                     <div className="h-full w-full max-w-[1000px] items-center justify-center rounded-lg overflow-hidden">
                       <div className="relative aspect-square w-full  overflow-hidden rounded-lg">
@@ -534,8 +543,9 @@ export default function HomePage() {
                 <BentoGridItem
                   title="Profesyonel Video İçerikler"
                   description="İşletmeniz için profesyonel video çekimleri ve kurguları."
-                  profileImage="/instagram3.jpg"
                   profileName="Pro Video Team"
+                  profileIcon={<Code2 className="w-5 h-5" />}
+                  whiteProfileIcon={true}
                   header={
                     <div className="flex h-full w-full items-center justify-center rounded-lg overflow-hidden">
                       <div className="relative h-full w-full overflow-hidden rounded-lg bg-black">
@@ -569,8 +579,9 @@ export default function HomePage() {
                 <BentoGridItem
                   title="Profesyonel Video İçerikler"
                   description="İşletmeniz için profesyonel video çekimleri ve kurguları."
-                  profileImage="/instagram6.jpg"
                   profileName="Video Studio"
+                  profileIcon={<Gauge className="w-5 h-5" />}
+                  whiteProfileIcon={true}
                   header={
                     <div className="flex h-full w-full items-center justify-center rounded-lg overflow-hidden">
                       <div className="relative h-full w-full overflow-hidden rounded-lg bg-black">

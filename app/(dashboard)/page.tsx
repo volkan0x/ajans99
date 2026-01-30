@@ -631,9 +631,9 @@ export default function HomePage() {
                 </h2>
                 <div className="w-full mt-auto">
                   <DropdownButton items={[
-                    { id: '10', label: '10 post / 999₺/ay' },
-                    { id: '15', label: '15 post / 1.499₺/ay' },
-                    { id: '20', label: '20 post / 1.999₺/ay' },
+                    { id: '10', label: '5 post / 1.999₺/ay' },
+                    { id: '15', label: '7 post / 2.499₺/ay' },
+                    { id: '20', label: '10 post / 4.999₺/ay' },
                   ]} />
                 </div>
               </div>
@@ -677,10 +677,10 @@ export default function HomePage() {
                 </h2>
                 <div className="w-full mt-auto">
                   <DropdownButton items={[
-                    { id: '5', label: '5 video / 1.999₺/ay' },
-                    { id: '10', label: '10 video / 3.499₺/ay' },
-                    { id: '15', label: '15 video / 4.999₺/ay' },
-                    { id: '20', label: '20 video / 6.499₺/ay' }
+                    { id: '5', label: '3 video / 1.999₺/ay' },
+                    { id: '10', label: '5 video / 3.499₺/ay' },
+                    { id: '15', label: '7 video / 4.999₺/ay' },
+                    { id: '20', label: '10 video / 6.499₺/ay' }
                   ]} />
                 </div>
               </div>
@@ -726,9 +726,9 @@ export default function HomePage() {
                 </h2>
                 <div className="w-full mt-auto">
                   <DropdownButton items={[
-                    { id: '5', label: '5 grafik reklam / 999₺/ay' },
-                    { id: '10', label: '4 grafik reklam / 3.499₺/ay' },
-                    { id: '15', label: '6 grafik reklam / 4.999₺/ay' },
+                    { id: '5', label: '4 grafik reklam / 999₺/ay' },
+                    { id: '10', label: '7 grafik reklam / 3.499₺/ay' },
+                    { id: '15', label: '10 grafik reklam / 4.999₺/ay' },
                   ]} />
                 </div>
               </div>
@@ -749,9 +749,9 @@ export default function HomePage() {
                 </h2>
                 <div className="w-full mt-auto">
                   <DropdownButton items={[
-                    { id: '3', label: '3 UGC video / 2.499₺/ay' },
-                    { id: '5', label: '6 UGC video / 3.999₺/ay' },
-                    { id: '8', label: '9 UGC video / 5.999₺/ay' },
+                    { id: '3', label: '2 UGC video / 2.499₺/ay' },
+                    { id: '5', label: '3 UGC video / 3.999₺/ay' },
+                    { id: '8', label: '5 UGC video / 5.999₺/ay' },
                   ]} />
                 </div>
               </div>
